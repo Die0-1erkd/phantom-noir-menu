@@ -23,7 +23,7 @@ const plans = [
   },
   {
     name: "Lifetime",
-    price: "79.99",
+    price: "45",
     duration: "Für immer",
     features: [
       "Alle Features",
@@ -90,13 +90,20 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <Button
-                variant={plan.popular ? "hero" : "outline"}
+              <a
+                href="https://discord.gg/ktCKKrYu6q"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full"
-                size="lg"
               >
-                Auswählen
-              </Button>
+                <Button
+                  variant={plan.popular ? "hero" : "outline"}
+                  className="w-full"
+                  size="lg"
+                >
+                  Auswählen
+                </Button>
+              </a>
             </div>
           ))}
         </div>
