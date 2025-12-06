@@ -1,4 +1,6 @@
-import { Ghost } from "lucide-react";
+import phantomLogo from "@/assets/phantom-logo.png";
+
+const DISCORD_LINK = "https://discord.gg/ktCKKrYu6q";
 
 const Navbar = () => {
   return (
@@ -7,7 +9,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2 group">
-            <Ghost className="w-6 h-6 text-primary group-hover:glow-text transition-all" />
+            <img src={phantomLogo} alt="Phantom" className="w-6 h-6 object-contain" />
             <span className="font-orbitron text-lg font-bold text-foreground tracking-wider">
               PHANTOM
             </span>
@@ -15,20 +17,33 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            {["Features", "Preise", "FAQ", "Discord"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-muted-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
-              >
-                {item}
-              </a>
-            ))}
+            <a
+              href="#features"
+              className="text-muted-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
+            >
+              Features
+            </a>
+            <a
+              href="#preise"
+              className="text-muted-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
+            >
+              Preise
+            </a>
+            <a
+              href={DISCORD_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
+            >
+              Discord
+            </a>
           </div>
 
           {/* CTA */}
           <a
-            href="#kaufen"
+            href={DISCORD_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors uppercase tracking-wider font-orbitron"
           >
             Kaufen
